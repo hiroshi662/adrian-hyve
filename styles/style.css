@@ -172,6 +172,7 @@ body {
 
 .about .container {
     display: flex;
+    position: relative;
 }
 
 .about-image,
