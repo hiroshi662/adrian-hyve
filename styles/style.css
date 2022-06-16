@@ -56,8 +56,9 @@ body {
 }
 
 .container {
-    max-width: 1024px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .header .container {
@@ -187,6 +188,8 @@ body {
     z-index: 1;
 }
 
+
+
 .about-text .sub-title {
     text-align: right;
     font-size: 45px;
@@ -259,8 +262,23 @@ body {
 
 .feedback {
     padding: 50px 0 65px;
-    background-image: url("../images/succes.jpg");
+    background-image: url("../images/3.png");
     background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 10;
+}
+
+.feedback::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.5;
+    z-index: -1;
 }
 
 .feedback .sub-title {
@@ -495,3 +513,341 @@ body {
 
 
 
+/*  adaptive  */
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+
+    .header .container {
+        justify-content: space-around;
+    }
+
+    .menu-item {
+        margin-right: 65px;
+    }
+
+    .main-info {
+        max-width: 45%;
+        padding: 40px 60px 60px;
+    }
+
+    .hello {
+        font-size: 22px;
+    }
+
+    .main-info-text {
+        padding-top: 35px;
+    }
+
+    .main-text {
+        padding: 35px 0;
+    }
+
+    .about-text::after {
+        width: 120%;
+        background-image: linear-gradient(45deg, transparent 0, transparent 20%, #e5e5e5);
+    }
+
+
+
+}
+
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+    
+
+    
+
+    .header .container {
+        display: block;
+        max-width: 720px;
+    }
+
+    .menu,
+    .logo {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    body .sub-title  {
+        font-size: 35px;
+    }
+
+    .logo img {
+        max-width: 200px;
+    }
+
+    .menu-item {
+        margin-right: 0;
+        padding-bottom: 20px;
+    }   
+    
+    .menu ul {
+        display: inline-block;
+    }
+
+    .menu-item a {
+        font-size: 20px;
+    }
+
+    .main-text {
+        padding: 40px 0;
+    }
+
+    .main-info {
+        max-width: 320px;
+        background-color: #000000a1;
+        padding: 50px 40px;
+    }
+
+    .main-info-text {
+        padding-top: 40px;
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: normal;
+        line-height: 20px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .about-text {
+        max-width: 90%;
+    }
+
+    .about-text p {
+        font-size: 18px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .about-text::after {
+        display: none;
+    }
+
+    .method .sub-title,
+    .method-text,
+    .price .sub-title,
+    .price-text {
+        text-align: center;
+    }
+
+    .method-text {
+        font-size: 20px;
+        padding: 40px;
+    }
+
+    .method-items {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .method-item {
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .method-item-text {
+        font-size: 20px;
+    }
+
+    .review-title {
+        padding-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .slider-slides .review-item {
+        height: 300px;
+        width: 85%;
+    }
+
+
+    .review-image img {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .review-text p::before,
+    .review-text p::after {
+        display: none;
+    }
+
+    .review-text p {
+        font-size: 18px;
+        padding: 0;
+    }
+
+    .slider-controls {
+        display: none;
+    }
+
+    .slider-slides {
+        width: 100%;
+    }
+
+    .review-text {
+        padding: 30px;
+    }
+
+    .price {
+        padding: 65px;
+    }
+
+    .price-text {
+        font-size: 20px;
+    }
+
+    .price-input,
+    .price-input.textarea {
+        width: 100%;
+    }
+
+    .price-form label {
+        font-size: 20px;
+    }
+
+    .footer .container {
+        display: block;
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .footer .logo {
+        margin-bottom: 30px;
+    }
+
+    .contacts::before {
+        display: none;
+    }
+
+    .contacts,
+    .copyright {
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .about .container {
+        flex-direction: column-reverse;
+    }
+
+    .about-text .sub-title {
+        text-align: center;
+        font-size: 35px;
+        margin: 20px 0;
+    }
+
+
+    .about-image img {
+        display: none;
+    }
+
+    .about .button {
+        display: block;
+        float: none;
+        width: 50%;
+        margin: 30px auto 0;
+    }
+
+    .feedback .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .footer {
+        padding: 0;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .method-items {
+        grid-template-columns: 100%;
+    }
+
+    .slider-slides .review-item {
+        display: grid;
+        height: 100%;
+        padding: 40px 20px;
+        float: none;
+        margin: 0 auto 40px;
+    }
+
+
+
+    .review-text p {
+        font-size: 17px;
+        padding: 0;
+        text-align: justify;
+    }
+
+    .review-text {
+        padding: 0;
+    }
+
+    .about .button {
+        width: 70%;
+    }
+
+    .feedback .sub-title {
+        margin-bottom: 20px;
+    }
+
+    .review-image {
+        margin: 0 auto;
+    }
+
+    .review-title {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .review-image img {
+        margin: 0;
+    }
+
+    .feedback .container {
+        width: 100%;
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .price {
+        padding: 65px 20px;
+    }
+
+    .about-text {
+        margin: 100px auto;
+    }
+
+    .about {
+        background-image: url("../images/1.jpeg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+        padding: 0;
+        position: relative;
+    }
+
+    .about::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+    .feedback {
+        background-size: auto;
+        background-position: center right;
+    }
+}
+    
